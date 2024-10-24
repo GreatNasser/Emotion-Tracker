@@ -1,44 +1,37 @@
-# Emotion Tracker with AI Sentiment Analysis (Text-based)
+
+# Emotion Tracker with AI Sentiment Analysis
 
 ## Introduction
-The **Emotion Tracker** tool is a Python-based solution that uses artificial intelligence (AI) to analyze the emotions embedded in text entries. It helps users track and understand their emotional state over time based on daily journal entries. The app processes the text, providing sentiment analysis that categorizes the text into positive, negative, or neutral emotions, offering deeper insights into mood fluctuations.
+The **Emotion Tracker** tool is a Python-based solution that uses artificial intelligence (AI) to analyze emotions from daily journal entries. It helps users track and understand their emotional state over time through sentiment analysis. The tool is designed to offer deep insights into mood fluctuations and emotional well-being.
+
+![Emotion Tracker Screenshot](./emotion_tracker_screenshot.png)
 
 ---
 
 ## Key Features
-- **Text-based Sentiment Analysis**: The app analyzes the provided text to determine whether the emotions expressed are positive, negative, or neutral.
-- **Emotion Tracking**: Tracks mood changes based on journal entries provided in plain text.
-- **Statistical Reporting**: Generates statistical reports that show emotional trends over time.
-- **Integration with Other Mental Health Tools**: Provides insights that can be integrated with tools like **Headspace** and **Calm** to support emotional well-being.
+| Feature                | Description                                                   | Integration Options            |
+|------------------------|---------------------------------------------------------------|--------------------------------|
+| **Sentiment Analysis**  | Analyzes emotions based on daily journal entries              | N/A                            |
+| **Emotion Tracking**    | Tracks mood over time                                         | N/A                            |
+| **Statistical Graphs**  | Provides data visualization for emotional trends              | N/A                            |
+| **Daily Reminders**     | Reminds users to log emotions                                 | N/A                            |
+| **Wellness Integration**| Connects with mental health apps                              | **Headspace**, **Calm**        |
 
 ---
 
-## Installation Guide
+## Example Sentiment Analysis
 
-To set up the tool, follow these steps:
+Here is an example Python code snippet used to perform sentiment analysis:
 
-1. **Install Python** (version 3.7 or higher).
-   Download and install Python from [python.org](https://www.python.org/downloads/).
-
-2. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/yourusername/emotion-tracker.git
-   cd emotion-tracker
-pip install nltk textblob matplotlib
-python analyze.py journal.txt
-{
-  "date": "2024-10-25",
-  "entry": "I had a great day today, everything went well.",
-  "sentiment": "Positive",
-  "sentiment_score": 0.8
-}
+```python
 from textblob import TextBlob
 
 def analyze_sentiment(text):
     blob = TextBlob(text)
     return blob.sentiment.polarity
 
-text = "I had a wonderful day!"
+# Example usage:
+text = "I had a fantastic day today!"
 sentiment_score = analyze_sentiment(text)
 if sentiment_score > 0:
     print("Positive")
@@ -46,3 +39,36 @@ elif sentiment_score < 0:
     print("Negative")
 else:
     print("Neutral")
+```
+
+---
+
+## Example JSON Report:
+
+```json
+{
+  "date": "2024-10-25",
+  "entry": "I had a fantastic day today!",
+  "sentiment": "Positive",
+  "sentiment_score": 0.8
+}
+```
+
+---
+
+## Footnotes
+
+- The **sentiment analysis** is powered by **TextBlob** and **NLTK** libraries[^1].
+- Data can be integrated with mental health apps like **Headspace** and **Calm** for additional well-being support[^2].
+
+[^1]: For more information on TextBlob, visit [TextBlob Documentation](https://textblob.readthedocs.io/en/dev/).
+[^2]: Learn more about integration options at [Headspace](https://www.headspace.com) and [Calm](https://www.calm.com).
+
+---
+
+## Emphasis Examples
+- This is *italic text*.
+- This is **bold text**.
+- ~~This is strikethrough text.~~
+- This is H~2~O (subscript).
+- This is 10^2^ (superscript).
