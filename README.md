@@ -4,7 +4,7 @@
 ## Introduction
 The **Emotion Tracker** tool is a Python-based solution that uses artificial intelligence (AI) to analyze emotions from daily journal entries. It helps users track and understand their emotional state over time through sentiment analysis. The tool is designed to offer deep insights into mood fluctuations and emotional well-being.
 
-![Emotion Tracker Screenshot](/mnt/data/A_clean_and_minimalist_user_interface_screenshot_s.png)
+![Emotion Tracker Screenshot](https://imgur.com/a/NvzkoFO)
 
 ---
 
